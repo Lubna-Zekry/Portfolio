@@ -1,0 +1,67 @@
+.education-section {
+  padding-bottom: 8rem;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 16, 122, 0.2);
+  transform: translateY(-5px);
+}
+
+.edu-icon {
+  font-size: 4rem;
+  background: var(--surface-color-light);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-pink-glow) inset;
+}
+
+.edu-content {
+  flex: 1;
+}
+
+.edu-degree {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-school {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.edu-details {
+  display: flex;
+  gap: 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .edu-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
