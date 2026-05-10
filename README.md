@@ -1,16 +1,49 @@
-# React + Vite
+# Lubna Zekry - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Preview](./src/assets/hero.png)
 
-Currently, two official plugins are available:
+Welcome to the repository of my personal portfolio website! This project is a modern, responsive web application built to showcase my journey as an E-commerce and Marketing Manager, my skills as a MERN stack developer, and my current training in .NET.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[🌐 View Live Portfolio](https://Lubna-Zekry.github.io/Portfolio)**
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Modern & Responsive Design**: A stunning dark-mode aesthetic featuring neon pink accents, ensuring a premium experience on both desktop and mobile devices.
+- **Hero Section**: A dynamic introduction with a "Preview CV" function to directly download or view my resume.
+- **Skills Showcase**: Highlighting my technical stack and professional expertise.
+- **Experience Timeline**: A visual timeline of my professional background and career progression.
+- **Projects Gallery**: A dedicated section to display my recent web development projects.
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js**: Front-end JavaScript library for building user interfaces.
+- **Vite**: Next-generation frontend tooling for fast development and building.
+- **Vanilla CSS**: Custom styling with CSS variables and modern layout techniques (Flexbox/Grid).
+- **GitHub Pages**: Deployed and hosted directly via GitHub Actions/gh-pages.
+
+## 💻 Running Locally
+
+If you'd like to run this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Lubna-Zekry/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+   Open `http://localhost:5173` in your browser to view the application.
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
