@@ -3,14 +3,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  background: rgba(253, 245, 249, 0.85);
+  backdrop-filter: blur(12px);
 }
 
 .navbar.scrolled {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 16, 122, 0.2);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(232, 0, 92, 0.15);
+  box-shadow: 0 2px 16px rgba(232, 0, 92, 0.07);
 }
 
 .nav-container {
@@ -23,20 +26,23 @@
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 2px;
+  flex-shrink: 0;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-links li a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links li a::after {
@@ -59,8 +65,68 @@
   color: var(--neon-pink);
 }
 
-@media (max-width: 768px) {
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  z-index: 1010;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--neon-pink);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--neon-pink);
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    border-left: 1px solid rgba(232, 0, 92, 0.15);
+    box-shadow: -5px 0 30px rgba(232, 0, 92, 0.08);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
   }
 }

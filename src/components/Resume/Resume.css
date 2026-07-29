@@ -1,0 +1,118 @@
+.resume-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume-preview {
+  overflow: hidden;
+}
+
+.pdf-frame {
+  position: relative;
+  width: 100%;
+}
+
+.cv-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cv-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 5, 16, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.resume-preview:hover .cv-overlay {
+  opacity: 1;
+}
+
+.resume-preview:hover .cv-preview-img {
+  transform: scale(1.02);
+}
+
+.cv-overlay-text {
+  background: rgba(255, 16, 122, 0.9);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Actions Card */
+.resume-actions {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.resume-heading {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.resume-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.resume-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.resume-btn {
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+}
+
+.resume-info {
+  border-top: 1px solid rgba(255, 16, 122, 0.2);
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.resume-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .resume-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

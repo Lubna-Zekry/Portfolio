@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-  --bg-color: #0b0510;
-  --surface-color: #1a0b22;
-  --surface-color-light: #2d133a;
-  --text-primary: #ffffff;
-  --text-secondary: #b3a5c3;
-  --neon-pink: #ff107a;
-  --neon-pink-glow: rgba(255, 16, 122, 0.6);
-  --neon-purple: #9d00ff;
+  /* Light theme colors */
+  --bg-color: #fdf5f9;
+  --surface-color: #ffffff;
+  --surface-color-light: #fce8f3;
+  --text-primary: #1a0a14;
+  --text-secondary: #6b4f62;
+  --neon-pink: #e8005c;
+  --neon-pink-glow: rgba(232, 0, 92, 0.25);
+  --neon-purple: #8b00e0;
+  --border-color: rgba(232, 0, 92, 0.18);
 }
 
 * {
@@ -27,13 +29,13 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--surface-color-light);
+  background: #f0c0d8;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -70,6 +72,7 @@ a {
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  color: var(--text-primary);
 }
 
 .section-title::after {
@@ -80,12 +83,12 @@ a {
   width: 100%;
   height: 3px;
   background: var(--neon-pink);
-  box-shadow: 0 0 10px var(--neon-pink);
+  border-radius: 2px;
 }
 
 .text-neon {
   color: var(--neon-pink);
-  text-shadow: 0 0 10px var(--neon-pink-glow), 0 0 20px var(--neon-pink-glow);
+  text-shadow: none;
 }
 
 .btn {
@@ -100,34 +103,35 @@ a {
   border: 2px solid var(--neon-pink);
   background: transparent;
   color: var(--neon-pink);
-  box-shadow: 0 0 10px var(--neon-pink-glow) inset, 0 0 10px var(--neon-pink-glow);
+  box-shadow: none;
 }
 
 .btn:hover {
   background: var(--neon-pink);
   color: #fff;
-  box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--neon-pink-glow);
 }
 
 .btn-solid {
   background: var(--neon-pink);
   color: #fff;
-  box-shadow: 0 0 15px var(--neon-pink);
+  box-shadow: 0 2px 12px var(--neon-pink-glow);
 }
 
 .btn-solid:hover {
   background: transparent;
   color: var(--neon-pink);
-  box-shadow: 0 0 10px var(--neon-pink-glow) inset, 0 0 10px var(--neon-pink-glow);
+  box-shadow: none;
 }
 
-/* Glassmorphism */
+/* Card surface / glassmorphism adapted for light */
 .glass {
-  background: rgba(26, 11, 34, 0.4);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 16, 122, 0.2);
+  background: #ffffff;
+  backdrop-filter: none;
+  border: 1px solid var(--border-color);
   border-radius: 15px;
+  box-shadow: 0 2px 16px rgba(232, 0, 92, 0.06);
 }
 
 /* Animations */
