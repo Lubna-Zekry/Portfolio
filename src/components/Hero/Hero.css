@@ -4,80 +4,92 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 100px;
+  padding-bottom: 4rem;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+  width: 100%;
 }
 
 .greeting {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .name {
-  font-size: 4.5rem;
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.15;
   margin-bottom: 1rem;
   background: linear-gradient(to right, #1a0a14, var(--neon-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  word-break: break-word;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.3;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
 
 .summary {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
   max-width: 600px;
+  line-height: 1.6;
 }
 
 .contact-info {
   margin-bottom: 2rem;
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .contact-info p {
   display: flex;
   align-items: center;
   gap: 10px;
+  word-break: break-word;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-buttons .btn {
+  white-space: nowrap;
 }
 
 .hero-visual {
   position: relative;
-  height: 500px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .glowing-orb {
   position: absolute;
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   background: var(--neon-pink);
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
+  filter: blur(100px);
+  opacity: 0.18;
   animation: pulse 4s infinite alternate;
 }
 
@@ -85,10 +97,10 @@
   width: 220px;
   height: 220px;
   background: var(--neon-purple);
-  filter: blur(90px);
-  opacity: 0.12;
-  top: 50%;
-  left: 60%;
+  filter: blur(80px);
+  opacity: 0.15;
+  top: 40%;
+  left: 50%;
   animation: pulse 5s infinite alternate-reverse;
 }
 
@@ -97,22 +109,30 @@
   100% { transform: scale(1.2); opacity: 0.22; }
 }
 
+/* Responsive Media Queries */
 @media (max-width: 992px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 3rem;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-  
-  .name {
-    font-size: 3.5rem;
+    gap: 1.5rem;
   }
   
   .summary {
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.8rem;
   }
 
   .contact-info {
     align-items: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
   }
   
   .hero-buttons {
@@ -120,6 +140,67 @@
   }
   
   .hero-visual {
-    height: 300px;
+    height: 180px;
+  }
+
+  .glowing-orb {
+    width: 220px;
+    height: 220px;
+    filter: blur(70px);
+  }
+
+  .orb-2 {
+    width: 150px;
+    height: 150px;
+    left: 45%;
   }
 }
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 90px;
+    padding-bottom: 2rem;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .title br {
+    display: none;
+  }
+
+  .summary {
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+    gap: 0.4rem;
+  }
+
+  .hero-buttons {
+    gap: 0.65rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-visual {
+    height: 120px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
